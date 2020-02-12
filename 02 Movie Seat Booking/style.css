@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: #242333;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#movie-picker {
+  margin-bottom: 20px
+}
+
+#movie {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+#showcase {
+  background: rgba(0, 0, 0, 0.1);
+  color: #777;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  justify-content: space-around;
+}
+
+#showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+#showcase li small {
+  margin-left: 2PX;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 3px;
+}
+
+#seat-picker .seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+#seat-picker {
+  perspective: 1000px;
+}
+
+.screen {
+  background: #fff;
+  width: 100%;
+  height: 70px;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.row {
+  display: flex;
+}
+
+.row .seat:nth-of-type(2),
+.row .seat:nth-of-type(6) {
+  margin-right: 18px;
+}
+
+#seat-picker {
+  margin-bottom: 30px;
+}
+
+#price {
+  margin: 5px 0;
+}
+
+#price span {
+  color: #6feaf6;
+}
